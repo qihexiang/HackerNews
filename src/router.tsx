@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import HackerNews from "./routes/hackernews";
+import HackerNews from "./routes/HackerNews";
 import Root from "./routes/Root";
 import ReadMore from "./routes/ReadMore";
 
