@@ -4,7 +4,7 @@ import Root from "./routes/Root";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/hakernews",
     element: <Root></Root>,
     children: [
       {
