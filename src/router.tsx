@@ -12,7 +12,7 @@ const router = createBrowserRouter([
         element: <HakerNews></HakerNews>
       },
       {
-        path: "/:channel",
+        path: ":channel",
         element: <HakerNews></HakerNews>,
       },
     ]

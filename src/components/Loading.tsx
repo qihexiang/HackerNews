@@ -8,6 +8,8 @@ const Loading: React.FC = () => {
         backgroundPosition: "center center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "contain",
+        minHeight: 64,
+        minWidth: 64,
       }}
     ></div>
   );
