@@ -4,7 +4,7 @@ import useSWR from "swr";
 import LoadError from "../components/Error";
 import Loading from "../components/Loading";
 import fetcher from "../utils/fetcher";
-import classes from "./hackernews.module.css";
+import classes from "./HackerNews.module.css";
 import { Link, useParams } from "react-router-dom";
 import { formatDistance } from "date-fns";
 import { Item } from "../DataType";
