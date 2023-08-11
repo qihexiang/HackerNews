@@ -1,0 +1,40 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 99;
+    background-color: #0081ff;
+    color: #ffffff;
+    padding: 8px;
+}
+
+.navbar h1 {
+    font-size: larger;
+}
+
+.navbar :link {
+    color: #ffffff;
+}
+
+.navbar :link:hover {
+    color: #de6464;
+}
+
+.navbar :visited {
+    color: #ffffff;
+}
+
+.navbar :visited:hover {
+    color: #de6464;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}

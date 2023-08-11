@@ -1,3 +1,38 @@
-.red {
-    color: red;
+.newsList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    align-items: stretch;
+    justify-content: space-around;
+    margin: 8px;
+}
+
+.container {
+    width: 80vw;
+    margin: auto;
+}
+
+.loadMore {
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .newsList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container {
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .newsList {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        width: 100vw;
+    }
 }

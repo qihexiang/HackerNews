@@ -1,40 +1,22 @@
 import { createBrowserRouter } from "react-router-dom";
-import Index from "./routes/Index";
 import HakerNews from "./routes/HakerNews";
-import TodoList from "./routes/TodoList";
-import RouteRoot from "./routes/Root";
-import { InView } from "react-intersection-observer";
+import Root from "./routes/Root";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <RouteRoot></RouteRoot>,
+    element: <Root></Root>,
     children: [
       {
         index: true,
-        element: <Index></Index>,
+        element: <HakerNews></HakerNews>
       },
       {
-        path: "/todo",
-        element: <TodoList></TodoList>,
-      },
-      {
-        path: "/hakernews",
+        path: "/:channel",
         element: <HakerNews></HakerNews>,
       },
-      {
-        path: "/inview_test",
-        element: (
-          <div>
-            <div style={{ height: 640 }}></div>
-            <InView onChange={(inview) => console.log(inview)}>
-              <h1>大标题</h1>
-            </InView>
-          </div>
-        ),
-      },
-    ],
-  },
+    ]
+  }
 ]);
 
 export default router;
