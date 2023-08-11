@@ -4,7 +4,7 @@ import useSWR from "swr";
 import LoadError from "../components/Error";
 import Loading from "../components/Loading";
 import fetcher from "../utils/fetcher";
-import classes from "./HackerNews.module.css";
+import classes from "./hackernews.module.css";
 import { Link, useParams } from "react-router-dom";
 import { formatDistance } from "date-fns";
 import { Item } from "../DataType";
@@ -37,7 +37,7 @@ function HackerNews() {
     <>
       <div className={classes.newsList}>
         {list.slice(0, endIndex).map((item) => (
-          <HackerNewsItem newsId={item} key={item}></HackerNewsItem>
+          <HackerNewsItem newsId={item} key={item}></hackernewsItem>
         ))}
       </div>
       <InView
@@ -58,7 +58,7 @@ function HackerNewsItem(props: { newsId: number }) {
   });
 
   const readMoreLink = (content: JSX.Element | string) => (
-    <Link to={`/HackerNews/readmore/${newsId}`}>{content}</Link>
+    <Link to={`/hackernews/readmore/${newsId}`}>{content}</Link>
   );
 
   if (error) return <LoadError></LoadError>;
@@ -77,7 +77,7 @@ function HackerNewsItem(props: { newsId: number }) {
               includeSeconds: true,
             })} ago
           </p>
-          {<Link to={`/HackerNews/user/${news.by}`}>{news.by}</Link>}
+          {<Link to={`/hackernews/user/${news.by}`}>{news.by}</Link>}
         </div>
         <div className={classes.more}>
           <p>Score: {news.score}</p>

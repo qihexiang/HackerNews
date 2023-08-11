@@ -1,16 +1,16 @@
 import { createBrowserRouter } from "react-router-dom";
-import HackerNews from "./routes/HackerNews";
+import HackerNews from "./routes/hackernews";
 import Root from "./routes/Root";
 import ReadMore from "./routes/ReadMore";
 
 const router = createBrowserRouter([
   {
-    path: "/HackerNews",
+    path: "/hackernews",
     element: <Root></Root>,
     children: [
       {
         index: true,
-        element: <HackerNews></HackerNews>,
+        element: <HackerNews></hackernews>,
       },
       {
         path: "user/:username",
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
       },
       {
         path: ":channel",
-        element: <HackerNews></HackerNews>,
+        element: <HackerNews></hackernews>,
       },
     ],
   },
