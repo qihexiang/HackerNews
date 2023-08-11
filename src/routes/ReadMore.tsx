@@ -22,7 +22,7 @@ function ReadMore() {
   return (
     <div>
       <h4>{news.title}</h4>
-      <Link to={`/hackernews/user/${news.by}`}>{news.by}</Link>
+      <Link to={`/HackerNews/user/${news.by}`}>{news.by}</Link>
       <p>{new Date(news.time * 1000).toLocaleDateString()}</p>
       {news.url !== undefined ? <a href={news.url}>Link</a> : null}
       {news.text !== undefined ? (

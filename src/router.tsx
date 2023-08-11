@@ -5,7 +5,7 @@ import ReadMore from "./routes/ReadMore";
 
 const router = createBrowserRouter([
   {
-    path: "/hackernews",
+    path: "/HackerNews",
     element: <Root></Root>,
     children: [
       {

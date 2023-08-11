@@ -58,7 +58,7 @@ function HackerNewsItem(props: { newsId: number }) {
   });
 
   const readMoreLink = (content: JSX.Element | string) => (
-    <Link to={`/hackernews/readmore/${newsId}`}>{content}</Link>
+    <Link to={`/HackerNews/readmore/${newsId}`}>{content}</Link>
   );
 
   if (error) return <LoadError></LoadError>;
@@ -77,7 +77,7 @@ function HackerNewsItem(props: { newsId: number }) {
               includeSeconds: true,
             })} ago
           </p>
-          {<Link to={`/hackernews/user/${news.by}`}>{news.by}</Link>}
+          {<Link to={`/HackerNews/user/${news.by}`}>{news.by}</Link>}
         </div>
         <div className={classes.more}>
           <p>Score: {news.score}</p>
