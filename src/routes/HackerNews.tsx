@@ -37,7 +37,7 @@ function HackerNews() {
     <>
       <div className={classes.newsList}>
         {list.slice(0, endIndex).map((item) => (
-          <HackerNewsItem newsId={item} key={item}></hackernewsItem>
+          <HackerNewsItem newsId={item} key={item}></HackerNewsItem>
         ))}
       </div>
       <InView

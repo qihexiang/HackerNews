@@ -10,7 +10,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <HackerNews></hackernews>,
+        element: <HackerNews></HackerNews>,
       },
       {
         path: "user/:username",
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
       },
       {
         path: ":channel",
-        element: <HackerNews></hackernews>,
+        element: <HackerNews></HackerNews>,
       },
     ],
   },
