@@ -7,9 +7,9 @@
     top: 0px;
     left: 0px;
     z-index: 99;
-    background-color: #0081ff;
+    background-color: var(--primary);
     color: #ffffff;
-    padding: 8px;
+    padding: 16px;
 }
 
 .navbar h1 {
@@ -21,7 +21,7 @@
 }
 
 .navbar :link:hover {
-    color: #de6464;
+    color: var(--orange)
 }
 
 .navbar :visited {
@@ -29,7 +29,7 @@
 }
 
 .navbar :visited:hover {
-    color: #de6464;
+    color: var(--orange);
 }
 
 .menu {
@@ -37,4 +37,21 @@
     flex-direction: row;
     align-items: center;
     gap: 8px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        width: 100%;
+    }
 }
