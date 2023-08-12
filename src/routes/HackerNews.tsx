@@ -167,7 +167,7 @@ function Comments(props: { list: number[] }) {
       }
     }, 500)
     return () => clearInterval(interval)
-})
+}, [loadMore])
 
   return (
     <div className={classes.commentList}>
