@@ -141,17 +141,24 @@ function HackerNewsDetail(props: { newsId: number }) {
   })} ago`;
 
   return (
-    <div className={classes.detail}>
-      <p className={classes.detailTitle}>{news.title}</p>
-      <p>
-        {ago} | By: {<Link to={`/user/${news.by}`}>{news.by}</Link>} | Score:{" "}
-        {news.score}
-      </p>
+    <>
+      <div className={classes.detailMeta}>
+        <p className={classes.detailTitle}>{news.title}</p>
+        <p>
+          {ago} | By: {<Link to={`/user/${news.by}`}>{news.by}</Link>} | Score:{" "}
+          {news.score}{" "}
+          {news.url !== undefined ? (
+            <>
+              | <a href={news.url}>Link</a>
+            </>
+          ) : null}
+        </p>
+      </div>
       {news.text !== undefined ? (
         <div dangerouslySetInnerHTML={{ __html: news.text }}></div>
       ) : null}
       {news.kids !== undefined ? <Comments list={news.kids}></Comments> : null}
-    </div>
+    </>
   );
 }
 
@@ -162,12 +169,12 @@ function Comments(props: { list: number[] }) {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if(loadMore) {
-        setIndex(index => index + 5)
+      if (loadMore) {
+        setIndex((index) => index + 5);
       }
-    }, 500)
-    return () => clearInterval(interval)
-}, [loadMore])
+    }, 500);
+    return () => clearInterval(interval);
+  }, [loadMore]);
 
   return (
     <div className={classes.commentList}>

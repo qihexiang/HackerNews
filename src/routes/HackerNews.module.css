@@ -73,14 +73,20 @@
     min-width: 40%;
     max-width: 95%;
     min-height: 60%;
-    max-height: 80%;
+    max-height: 90%;
     background-color: white;
     border-radius: 8px;
-    padding: 8px;
+    padding: 0px 8px;
     overflow: scroll;
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+.detailMeta {
+    position: sticky;
+    background-color: white;
+    top: 0;
 }
 
 .detailTitle {
