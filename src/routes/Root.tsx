@@ -7,9 +7,9 @@ function Root() {
       <div className={classes.navbar}>
         <h1>Haker News</h1>
         <div className={classes.menu}>
-          <Link to={"/hackernews"}>Top</Link>
-          <Link to={"/hackernews/new"}>New</Link>
-          <Link to={"/hackernews/best"}>Best</Link>
+          <Link to={"/"}>Top</Link>
+          <Link to={"/new"}>New</Link>
+          <Link to={"/best"}>Best</Link>
         </div>
       </div>
       <div className={classes.container}>
